@@ -1,7 +1,7 @@
 # MpRL-for-person-re-ID
 This repository contains the code for our paper [Multi-Pseudo Regularized Label for Generated Data in Person Re-Identification](https://ieeexplore.ieee.org/abstract/document/8485730).
 
-Part of code in this repository is borrowed from [Person-reID_GAN](https://github.com/layumi/Person-reID_GAN).
+The code is mainly modified from [Person-reID_GAN](https://github.com/layumi/Person-reID_GAN).
 
 ### To run this code
 
@@ -19,7 +19,7 @@ This repository includes two baseline code and the dMpRL-II method in our paper.
 | train_2stream_baseline.m    | ResNet50 two-stream baseline (only use real data) | 
 | train_2stream_MpRL3.m | assign dMpRL-II label for generated images (combine real and generated data)| 
 
-* You can find more detailed code for our MpRL Loss in:
+* We propose MpRL virtual labels for generated data. Three strategies are used to train the combination of real and generated data. We named the three strategies as sMpRL, dMpRL-I and dMpRL-II respectively in our paper. You can find more detailed code for our MpRL Loss in:
 
 sMpRL (the training code will be added to this repos soon):
 https://github.com/Huang-3/MpRL-for-person-re-ID/blob/master/matlab/%2Bdagnn/Pseudo_Loss_Multi_Static.m
