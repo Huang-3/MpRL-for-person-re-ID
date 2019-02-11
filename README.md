@@ -7,7 +7,7 @@ Part of code in this repository is borrowed from [Person-reID_GAN](https://githu
 
 ### 1.Data Generation (GAN)
 The first stage is to generate fake images by DCGAN.
-We use the at https://github.com/layumi/DCGAN-tensorflow.
+We use the DCGAN code at https://github.com/layumi/DCGAN-tensorflow.
 
 ### 2.Semi-supervised Learning
 This repository includes two baseline code and the dMpRL-II method in our paper.
