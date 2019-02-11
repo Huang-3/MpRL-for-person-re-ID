@@ -8,6 +8,7 @@ The code is mainly modified from [Person-reID_GAN](https://github.com/layumi/Per
 ### 1.Data Generation (GAN)
 The first stage is to generate fake images by DCGAN.
 We use the DCGAN code at https://github.com/layumi/DCGAN-tensorflow.
+
 You can also directly download our generated data (24000 generated images for Market1501) from [Google_Drive](https://drive.google.com/open?id=1-Qv8QfmLi24svclJ3Ee-6y5Zk6HLjZfP)
 
 ### 2.Semi-supervised Learning
