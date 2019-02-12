@@ -23,14 +23,11 @@ This repository includes two baseline code and the dMpRL-II method in our paper.
 
 * We propose MpRL virtual labels for generated data. Three strategies are used to train the combination of real and generated data. We named the three strategies as sMpRL, dMpRL-I and dMpRL-II respectively in our paper. You can find more detailed code for our MpRL Loss in:
 
-sMpRL (Static MpRL; the training code will be added to this repos soon):
-https://github.com/Huang-3/MpRL-for-person-re-ID/blob/master/matlab/%2Bdagnn/Pseudo_Loss_Multi_Static.m
+[sMpRL (Static MpRL; the training code will be added to this repos soon)](https://github.com/Huang-3/MpRL-for-person-re-ID/blob/master/matlab/%2Bdagnn/Pseudo_Loss_Multi_Static.m)
 
-dMpRL-I (Dynamic MpRL-I: Dynamically Update MpRL from scratch; the training code will be added to this repos soon):
-https://github.com/Huang-3/MpRL-for-person-re-ID/blob/master/matlab/%2Bdagnn/Pseudo_Loss_Multi_Dynamic_1.m
+[dMpRL-I (Dynamic MpRL-I: Dynamically Update MpRL from scratch; the training code will be added to this repos soon)](https://github.com/Huang-3/MpRL-for-person-re-ID/blob/master/matlab/%2Bdagnn/Pseudo_Loss_Multi_Dynamic_1.m)
 
-dMpRL-II (Dynamic MpRL-II: Dynamically Update MpRL from the intermediate point; Our best method, used in this repos):
-https://github.com/Huang-3/MpRL-for-person-re-ID/blob/master/matlab/%2Bdagnn/Pseudo_Loss_Multi_Dynamic_2.m
+[dMpRL-II (Dynamic MpRL-II: Dynamically Update MpRL from the intermediate point; Our best method, used in this repos)](https://github.com/Huang-3/MpRL-for-person-re-ID/blob/master/matlab/%2Bdagnn/Pseudo_Loss_Multi_Dynamic_2.m)
 
 
 ### Compile Matconvnet
