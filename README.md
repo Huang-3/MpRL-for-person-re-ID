@@ -1,5 +1,5 @@
-# MpRL-for-person-re-ID
-This repository contains the code for our paper [Multi-Pseudo Regularized Label for Generated Data in Person Re-Identification](https://ieeexplore.ieee.org/abstract/document/8485730).
+# Multi-Pseudo Regularized Label for Generated Data in Person Re-Identification
+This repository contains the code for our TIP paper [Multi-Pseudo Regularized Label for Generated Data in Person Re-Identification](https://ieeexplore.ieee.org/abstract/document/8485730).
 
 The code is mainly modified from [Person-reID_GAN](https://github.com/layumi/Person-reID_GAN).
 
