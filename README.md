@@ -40,19 +40,19 @@ We take Market1501 as an example in this repos.
 Download [Market1501 Dataset](http://www.liangzheng.org/Project/project_reid.html)
 
 ### Training and Testing
-1. Download the [ResNet-50 model](http://www.vlfeat.org/matconvnet/models/imagenet-resnet-50-dag.mat) pretrained on Imagenet. Put it in the `result` dir.
+1. Download the [ResNet-50 model](http://www.vlfeat.org/matconvnet/models/imagenet-resnet-50-dag.mat) pretrained on Imagenet. Creat a folder named as `result`. Put it in the `./result` dir.
 
 2. Prepare data:
    For real data: `code/prepare_data/prepare_data.m`.
    For real + generated data: `code/prepare_data/prepare_gan_data.m`
 
 3. Run the training code:
-   Simply run the  `train.m`, the trained model will be saved at `result/Model_Name/`
+   Simply run the  `train.m`, the trained model will be saved at `./result/Model_Name/`
    
 4. Evaluation:
-   Run `test/test_gallery_query_crazy.m` to extract feature of images in the gallery and query set. They will store in a .mat file in `test`. Then you can use it to do evaluation.
+   Run `./test/test_gallery_query_crazy.m` to extract feature of images in the gallery and query set. They will store in a .mat file in `test`. Then you can use it to do evaluation.
    
-   Run `evaluation/zzd_evaluation_res_faster.m` to get the rank-1 accuracy and mAP
+   Run `./evaluation/zzd_evaluation_res_faster.m` to get the rank-1 accuracy and mAP
    
 ### Citation
 Please cite this paper in your publications if it helps your research:
