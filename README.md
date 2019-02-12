@@ -23,19 +23,20 @@ This repository includes two baseline code and the dMpRL-II method in our paper.
 
 * We propose MpRL virtual labels for generated data. Three strategies are used to train the combination of real and generated data. We named the three strategies as sMpRL, dMpRL-I and dMpRL-II respectively in our paper. You can find more detailed code for our MpRL Loss in:
 
-sMpRL (the training code will be added to this repos soon):
+sMpRL (Static MpRL; the training code will be added to this repos soon):
 https://github.com/Huang-3/MpRL-for-person-re-ID/blob/master/matlab/%2Bdagnn/Pseudo_Loss_Multi_Static.m
 
-dMpRL-I (the training code will be added to this repos soon):
+dMpRL-I (Dynamic MpRL-I: Dynamically Update MpRL from scratch; the training code will be added to this repos soon):
 https://github.com/Huang-3/MpRL-for-person-re-ID/blob/master/matlab/%2Bdagnn/Pseudo_Loss_Multi_Dynamic_1.m
 
-dMpRL-II (Our best method, used in this repos):
+dMpRL-II (Dynamic MpRL-II: Dynamically Update MpRL from the intermediate point; Our best method, used in this repos):
 https://github.com/Huang-3/MpRL-for-person-re-ID/blob/master/matlab/%2Bdagnn/Pseudo_Loss_Multi_Dynamic_2.m
 
 
 ### Compile Matconvnet
-We use the Matconvnet package to implement our code, you can juse download this repos and run `gpu_compile.m` in Matlab to compile functions in this repos. We have included the Matconvnet in this repos.
-(We use Cuda-8.0 and Cudnn-5.1, our code do not support cudnn version > 5.1. If you have any problem in compiling, first, try to check your cudnn version.) 
+We use the Matconvnet package, you can just download this repos and run `gpu_compile.m` in Matlab to compile functions. The Matconvnet package already included in this repos. There is no need to download Matconvnet from the official website.
+
+We use Cuda-8.0 and Cudnn-5.1, our code does not support cudnn version > 5.1. If you have any problem in compiling, first, try to check your cudnn version. 
 
 ### Dataset
 We take Market1501 as an example in this repos.
@@ -54,7 +55,7 @@ Download [Market1501 Dataset](http://www.liangzheng.org/Project/project_reid.htm
 4. Evaluation:
    Run `test/test_gallery_query_crazy.m` to extract feature of images in the gallery and query set. They will store in a .mat file in `test`. Then you can use it to do evaluation.
    
-   Run `evaluation/zzd_evaluation_res_faster.m`
+   Run `evaluation/zzd_evaluation_res_faster.m` to get the rank-1 accuracy and mAP
    
 ### Citation
 Please cite this paper in your publications if it helps your research:
