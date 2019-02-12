@@ -17,9 +17,9 @@ This repository includes two baseline code and the dMpRL-II method in our paper.
 | Models               | Reference | 
 | --------              | -----  | 
 | train_res_iden_baseline.m        | ResNet50 baseline (only use real data) | 
-| train_res_iden_sMpRL.m    | assign sMpRL label for generated images (combine real and generated data)|  
-| train_res_iden_MpRL2.m    | assign dMpRL-I label for generated images (combine real and generated data)| 
-| train_res_iden_MpRL3.m | assign dMpRL-II label for generated images (combine real and generated data)| 
+| train_res_iden_sMpRL.m    | sMpRL label for generated images (combine real and generated data)|  
+| train_res_iden_MpRL2.m    | dMpRL-I label for generated images (combine real and generated data)| 
+| train_res_iden_MpRL3.m | dMpRL-II label for generated images (combine real and generated data)| 
 
 * We propose MpRL virtual labels for generated data. Three strategies are used to train the combination of real and generated data. We named the three strategies as sMpRL, dMpRL-I and dMpRL-II respectively in our paper. You can find more detailed code for our MpRL in:
 
