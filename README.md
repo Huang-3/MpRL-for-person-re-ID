@@ -58,6 +58,7 @@ Download [Market1501 Dataset](http://www.liangzheng.org/Project/project_reid.htm
    
    Run `./evaluation/zzd_evaluation_res_faster.m` to get the rank-1 accuracy and mAP
    
+   If you find some bugs in our code, pls do not hesitate to email me: Yan.Huang-3@student.uts.edu.au
 ### Citation
 Please cite this paper in your publications if it helps your research:
 ```
