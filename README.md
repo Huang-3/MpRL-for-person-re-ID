@@ -17,17 +17,17 @@ This repository includes two baseline code and the dMpRL-II method in our paper.
 | Models               | Reference | 
 | --------              | -----  | 
 | train_res_iden_baseline.m        | ResNet50 baseline (only use real data) | 
-| train_res_iden_MpRL3.m    | assign dMpRL-II label for generated images (combine real and generated data)|  
-| train_2stream_baseline.m    | ResNet50 two-stream baseline (only use real data) | 
-| train_2stream_MpRL3.m | assign dMpRL-II label for generated images (combine real and generated data)| 
+| train_res_iden_sMpRL.m    | assign sMpRL label for generated images (combine real and generated data)|  
+| train_res_iden_MpRL2.m    | assign dMpRL-I label for generated images (combine real and generated data)| 
+| train_res_iden_MpRL3.m | assign dMpRL-II label for generated images (combine real and generated data)| 
 
-* We propose MpRL virtual labels for generated data. Three strategies are used to train the combination of real and generated data. We named the three strategies as sMpRL, dMpRL-I and dMpRL-II respectively in our paper. You can find more detailed code for our MpRL Loss in:
+* We propose MpRL virtual labels for generated data. Three strategies are used to train the combination of real and generated data. We named the three strategies as sMpRL, dMpRL-I and dMpRL-II respectively in our paper. You can find more detailed code for our MpRL in:
 
-[sMpRL (Static MpRL; the training code will be added to this repos soon)](https://github.com/Huang-3/MpRL-for-person-re-ID/blob/master/matlab/%2Bdagnn/Pseudo_Loss_Multi_Static.m)
+[sMpRL (Static MpRL)](https://github.com/Huang-3/MpRL-for-person-re-ID/blob/master/matlab/%2Bdagnn/Pseudo_Loss_Multi_Static.m)
 
-[dMpRL-I (Dynamic MpRL-I: Dynamically Update MpRL from scratch; the training code will be added to this repos soon)](https://github.com/Huang-3/MpRL-for-person-re-ID/blob/master/matlab/%2Bdagnn/Pseudo_Loss_Multi_Dynamic_1.m)
+[dMpRL-I (Dynamic MpRL-I: Dynamically Update MpRL from scratch)](https://github.com/Huang-3/MpRL-for-person-re-ID/blob/master/matlab/%2Bdagnn/Pseudo_Loss_Multi_Dynamic_1.m)
 
-[dMpRL-II (Dynamic MpRL-II: Dynamically Update MpRL from the intermediate point; Our best method, used in this repos)](https://github.com/Huang-3/MpRL-for-person-re-ID/blob/master/matlab/%2Bdagnn/Pseudo_Loss_Multi_Dynamic_2.m)
+[dMpRL-II (Dynamic MpRL-II: Dynamically Update MpRL from the intermediate point)](https://github.com/Huang-3/MpRL-for-person-re-ID/blob/master/matlab/%2Bdagnn/Pseudo_Loss_Multi_Dynamic_2.m)
 
 
 ### Compile Matconvnet
@@ -42,14 +42,18 @@ Download [Market1501 Dataset](http://www.liangzheng.org/Project/project_reid.htm
 ### Training and Testing
 1. Download the [ResNet-50 model](http://www.vlfeat.org/matconvnet/models/imagenet-resnet-50-dag.mat) pretrained on Imagenet. Creat a folder named as `result`. Put it in the `./result` dir.
 
-2. Prepare data:
-   For real data: `code/prepare_data/prepare_data.m`.
-   For real + generated data: `code/prepare_data/prepare_gan_data.m`
-
-3. Run the training code:
-   Simply run the  `train.m`, the trained model will be saved at `./result/Model_Name/`
+2. Run the training code:
+   Simply run the  `./train.m`, the trained model will be saved at `./result/Model_Name/`
    
-4. Evaluation:
+   This step including the data preparation and training (baseline, sMpRL, dMpRL-I and dMpRL-II).
+   
+   For real data preparation: `code/prepare_data/prepare_data.m`.
+   
+   For real + generated data preparation: `code/prepare_data/prepare_gan_data.m` (for dMpRL-I and dMpRL-II)
+   
+   For real + generated data preparation: `code/prepare_data/prepare_sMpRL_label4data.m` (for sMpRL)
+   
+3. Evaluation:
    Run `./test/test_gallery_query_crazy.m` to extract feature of images in the gallery and query set. They will store in a .mat file in `test`. Then you can use it to do evaluation.
    
    Run `./evaluation/zzd_evaluation_res_faster.m` to get the rank-1 accuracy and mAP
