@@ -9,7 +9,9 @@ The code is mainly modified from [Person-reID_GAN](https://github.com/layumi/Per
 The first stage is to generate fake images by DCGAN.
 We use the DCGAN code at https://github.com/layumi/DCGAN-tensorflow.
 
-You can also directly download our generated data (24000 generated images for Market1501) from [Google_Drive](https://drive.google.com/open?id=1-Qv8QfmLi24svclJ3Ee-6y5Zk6HLjZfP)
+You can also directly download our generated data (24000 generated images for Market1501) from [Google_Drive](https://drive.google.com/open?id=1-Qv8QfmLi24svclJ3Ee-6y5Zk6HLjZfP) or
+
+[Baidu Cloud Link](https://pan.baidu.com/s/1vjzMudZI7v8VQ1vsLuuAGQ)，extraction code (提取码): yksd
 
 ### 2.Semi-supervised Learning
 This repository includes two baseline code and the dMpRL-II method in our paper.
